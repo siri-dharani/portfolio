@@ -1,87 +1,136 @@
-
-.navbar {
-    background-color: #000000 !important; 
-    color: #f9f9f9;
+/* Background and font */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #181a1f; /* fallback solid color */
+    background-image: linear-gradient(135deg, #3a3d40 0%, #181a1f 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.navbar .nav-link {
-    color: #f5f7f9 !important; 
-    font-weight: 500;
-    transition: color 0.3s ease;
+
+/* Optional: prevent any empty footer space from showing gray */
+footer {
+    display: none;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: #575650 !important; 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Background & Fonts */
+.background_style {
+    background: linear-gradient(135deg, #3a3d40 0%, #181a1f 100%);
+    font-family: 'Roboto', sans-serif;
 }
 
-
+/* Navbar */
+nav.navbar {
+  background-color: #212529 !important;
+}
 .navbar-brand {
-    color: #f8f9fa !important;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: #f8c146 !important;
+  font-weight: 700;
+  font-size: 1.7rem;
 }
-
+.navbar-nav .nav-link {
+  color: #ddd !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #f8c146 !important;
+}
 .navbar-toggler {
-    border: none;
+  border: none;
 }
 .navbar-toggler-icon {
-    background-color: #fff;
-    border-radius: 5px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f8c146' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-.hello_text{
-    font-family: 'roboto', sans-serif;
-    font-weight: medium;
-    font-size: 64px;
-    color: #ffffff !important;
-}
-.background_style{
-    background-color: rgb(195, 160, 113);
-    background-attachment: fixed;
-    font-family: 'roboto', sans-serif;
-}
-.project_card{
-    background-color: rgb(247, 245, 242);
-    width: 400px;
-    margin-top: 20px;
+
+
+/* Project Cards */
+.project_card {
+    background-color: #2b2e33;
+    width: 100%;
+    max-width: 400px;
     border-radius: 30px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-h1{
-    font-family: 'roboto', sans-serif;
-    font-weight: medium;
-    font-size: 45px;
-    color: #120101 !important;
-    text-align: center;
+.project_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(248, 193, 70, 0.3);
 }
-p{
-    font-family: 'roboto', sans-serif;
-    font-weight: medium;
-    font-size: 16px;
-    color: #120101 !important;
-    text-align: center;
-}
-.button_style{
-    background-color: #000000;
-    color: #ffffff !important;
-    font-family: 'roboto', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 60px;
-    border-color: none;
-    height: 50px;
-    width: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card-img-top{
-    height: 200px;
+
+/* Image */
+.card-img-top {
+    height: 220px;
+    width: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 20px;
 }
-.button_div{
+
+/* Text */
+.card_head {
+    font-size: 1.8rem;
+    color: #f8c146;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 1rem 0;
+}
+
+/* Button */
+.button_style {
+    background-color: #f8c146;
+    border: none;
+    color: #212529;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.6rem 2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button_style:hover {
+    background-color: #d4a72f;
+}
+.button_div {
     display: flex;
     justify-content: center;
-    margin-bottom: 5px;
-    padding: 5px;
+}
+
+/* Container padding */
+.content-wrapper {
+    flex: 1;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 200px;
+    }
+    .card_head {
+        font-size: 1.5rem;
+    }
+    .button_style {
+        font-size: 1rem;
+        padding: 0.5rem 1.8rem;
+    }
 }
